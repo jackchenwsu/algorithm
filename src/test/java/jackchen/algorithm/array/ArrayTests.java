@@ -2,6 +2,7 @@ package jackchen.algorithm.array;
 
 import org.junit.Test;
 import org.junit.Assert;
+import org.junit.experimental.theories.suppliers.TestedOn;
 
 public class ArrayTests {
 
@@ -80,5 +81,25 @@ public class ArrayTests {
         int [] prices = {7, 1, 5, 3, 6, 4};
         int maxProfit = stock.maxProfit(prices);
         Assert.assertEquals(5, maxProfit);
+    }
+
+    @Test
+    public void maxProfit2Test()
+    {
+        BuyAndSellStock stock = new BuyAndSellStock();
+        int [] prices = {7, 1, 5, 3, 6, 4};
+        int maxProfit = stock.maxProfit2_1(prices);
+        Assert.assertEquals(7, maxProfit);
+        maxProfit = stock.maxProfit2_2(prices);
+        Assert.assertEquals(7, maxProfit);
+    }
+
+    @Test
+    public void ContainMostWaterTest()
+    {
+        ContainMostWater water = new ContainMostWater();
+        int [] heights = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        int maxArea = water.maxArea(heights);
+        Assert.assertEquals(49, maxArea);
     }
 }
