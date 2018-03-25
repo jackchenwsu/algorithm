@@ -95,11 +95,30 @@ public class ArrayTests {
     }
 
     @Test
-    public void ContainMostWaterTest()
+    public void containMostWaterTest()
     {
         ContainMostWater water = new ContainMostWater();
         int [] heights = {1, 8, 6, 2, 5, 4, 8, 3, 7};
         int maxArea = water.maxArea(heights);
         Assert.assertEquals(49, maxArea);
+    }
+
+    @Test
+    public void maxSubarrayTest()
+    {
+        MaximumSubarray maxSubarray = new MaximumSubarray();
+        int [] array = {-2,1,-3,4,-1,2,1,-5,4};
+        int actual = maxSubarray.maxSubarray(array);
+        Assert.assertEquals(6, actual);
+    }
+
+    @Test
+    public void moveZerosTest()
+    {
+        MoveZeroes move = new MoveZeroes();
+        int[] nums = {0, 1, 0, 3, 12};
+        move.moveZeroes(nums);
+        int[] expected = {1, 3, 12, 0, 0};
+        Assert.assertArrayEquals(expected, nums);
     }
 }
