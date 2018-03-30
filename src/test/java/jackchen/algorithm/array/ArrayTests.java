@@ -121,4 +121,11 @@ public class ArrayTests {
         int[] expected = {1, 3, 12, 0, 0};
         Assert.assertArrayEquals(expected, nums);
     }
+
+    @Test
+    public void pascalTriangelTest()
+    {
+        PascalTriangle test = new PascalTriangle();
+        test.generate(5);
+    }
 }
