@@ -128,4 +128,31 @@ public class ArrayTests {
         PascalTriangle test = new PascalTriangle();
         test.generate(5);
     }
+
+    @Test
+    public void RotateImageTest()
+    {
+        RotateImage image = new RotateImage();
+        int[][] matrix = new int[][] { {1, 2, 3,}, {4, 5, 6}, {7, 8, 9}};
+        image.rotate(matrix);
+        Assert.assertArrayEquals(new int[] {7, 4, 1}, matrix[0]);
+        Assert.assertArrayEquals(new int[] {8, 5, 2}, matrix[1]);
+        Assert.assertArrayEquals(new int[] {9, 6, 3}, matrix[2]);
+    }
+
+    @Test
+    public void containsNearbyDuplicateTest()
+    {
+        ContainsDuplicate cd = new ContainsDuplicate();
+        Assert.assertTrue(cd.containsNearbyDuplicate(new int[] {99, 99}, 2));
+    }
+
+    @Test
+    public void searchRotatedSortedArray()
+    {
+        SearchRotatedSortedArray srsa = new SearchRotatedSortedArray();
+        int[] nums = new int[] {1, 3};
+
+        Assert.assertEquals(-1, srsa.search(nums, 0));
+    }
 }
