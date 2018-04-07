@@ -8,12 +8,15 @@ public class BalancedBinaryTree {
         return Math.max(getTreeHeight(root.left), getTreeHeight(root.right)) + 1;
     }
 
+    /*
+     * 110. Given a binary tree, determine if it is height-balanced.
+     */
     public boolean isBalanced(TreeNode root) {
         if (root == null) return false;
 
         if (Math.abs(this.getTreeHeight(root.left) - this.getTreeHeight(root.right)) > 1)
             return false;
 
-        return true;
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 }
