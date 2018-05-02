@@ -10,6 +10,14 @@ public class BuildTree {
         return this.helper(0, 0, inorder.length-1, preorder, inorder);
     }
 
+    /*
+     * 106. Given inorder and postorder traversal of a tree, construct the binary tree.
+     */
+    public TreeNode buildTree2(int[] inorder, int[] postorder)
+    {
+
+    }
+
     private TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder)
     {
         if (preStart > preorder.length - 1 || inStart > inEnd) return null;
@@ -27,5 +35,10 @@ public class BuildTree {
         root.right = this.helper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd, preorder, inorder);
 
         return root;
+    }
+
+    private TreeNode helper2(int inStart, int inEnd, int postEnd, int[] inorder, int[] postorder)
+    {
+
     }
 }
