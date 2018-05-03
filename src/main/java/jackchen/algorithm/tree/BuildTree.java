@@ -15,7 +15,7 @@ public class BuildTree {
      */
     public TreeNode buildTree2(int[] inorder, int[] postorder)
     {
-
+        return this.helper2(0, inorder.length-1, 0,postorder.length-1, inorder, postorder);
     }
 
     private TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder)
@@ -28,6 +28,7 @@ public class BuildTree {
             if (inorder[i] == preorder[preStart])
             {
                 inIndex = i;
+                break;
             }
         }
         TreeNode root = new TreeNode(preorder[preStart]);
@@ -37,8 +38,24 @@ public class BuildTree {
         return root;
     }
 
-    private TreeNode helper2(int inStart, int inEnd, int postEnd, int[] inorder, int[] postorder)
+    private TreeNode helper2(int inStart, int inEnd, int postStart, int postEnd, int[] inorder, int[] postorder)
     {
+        if(postStart > postEnd) return null;
 
+        int inIndex = 0;
+        for (int i=inStart; i<=inEnd; i++)
+        {
+            if(inorder[i] == postorder[postEnd])
+            {
+                inIndex = i;
+                break;
+            }
+        }
+
+        TreeNode root = new TreeNode(postorder[postEnd]);
+        root.left = this.helper2(inStart, inIndex-1, postStart, postEnd - inEnd + inIndex - 1, inorder, postorder);
+        root.right = this.helper2(inIndex+1, inEnd, postEnd - inEnd + inIndex, postEnd-1, inorder, postorder);
+
+        return root;
     }
 }
