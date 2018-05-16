@@ -2,7 +2,6 @@ package jackchen.algorithm.array;
 
 import org.junit.Test;
 import org.junit.Assert;
-import org.junit.experimental.theories.suppliers.TestedOn;
 
 public class ArrayTests {
 
