@@ -154,4 +154,12 @@ public class ArrayTests {
 
         Assert.assertEquals(-1, srsa.search(nums, 0));
     }
+
+    @Test
+    public void splitArrayintoConsecutiveSubsequence()
+    {
+        SplitArrayintoConsecutiveSubsequence test = new SplitArrayintoConsecutiveSubsequence();
+        int[] nums = new int[] {1, 2, 3, 3, 4, 4, 5, 5};
+        Assert.assertTrue(test.isPossible(nums));
+    }
 }

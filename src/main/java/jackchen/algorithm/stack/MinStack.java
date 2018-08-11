@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class MinStack {
     int min = Integer.MAX_VALUE;
-    Stack<Integer> stack = new Stack<Integer>();
+    Stack<Integer> stack = new Stack<>();
 
     public void push(int x) {
 
