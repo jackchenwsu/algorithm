@@ -1,7 +1,6 @@
 package jackchen.algorithm.array;
 
 public class NumberOfCornerRectangles {
-
     /*
      * 750. Given a grid where each entry is only 0 or 1, find the number of corner rectangles.
      *      A corner rectangle is 4 distinct 1s on the grid that form an axis-aligned rectangle.
