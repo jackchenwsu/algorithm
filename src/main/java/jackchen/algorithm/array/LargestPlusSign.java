@@ -12,5 +12,6 @@ public class LargestPlusSign {
      *       only the relevant area of the plus sign is checked for 1s.
      */
     public int orderOfLargestPlusSign(int N, int[][] mines) {
+        return 0;
     }
 }
