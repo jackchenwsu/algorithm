@@ -162,4 +162,17 @@ public class ArrayTests {
         int[] nums = new int[] {1, 2, 3, 3, 4, 4, 5, 5};
         Assert.assertTrue(test.isPossible(nums));
     }
+
+    @Test
+    public void meetingRoomIITest()
+    {
+        MeetingRoomII test = new MeetingRoomII();
+        Interval[] samples = new Interval[4];
+        samples[0] = new Interval(2, 4);
+        samples[1] = new Interval(7, 10);
+        samples[2] = new Interval(8, 11);
+        samples[3] = new Interval(3, 5);
+
+        Assert.assertEquals(2, test.minMeetingRooms(samples));
+    }
 }

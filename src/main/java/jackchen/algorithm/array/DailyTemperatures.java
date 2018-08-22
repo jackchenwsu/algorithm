@@ -1,5 +1,7 @@
 package jackchen.algorithm.array;
 
+import java.util.Stack;
+
 public class DailyTemperatures {
 
     /*
@@ -14,7 +16,7 @@ public class DailyTemperatures {
 
         for (int i= temperatures.length - 1; i >= 0; i--) {
 
-            while(!stack.isEmpty() && temperatures[i] >= T[stack.peek()]) stack.pop();
+            while(!stack.isEmpty() && temperatures[i] >= temperatures[stack.peek()]) stack.pop();
 
             res[i] = stack.isEmpty() ? 0 : stack.peek() - i;
 
