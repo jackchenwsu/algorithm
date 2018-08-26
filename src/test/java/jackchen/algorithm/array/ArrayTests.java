@@ -175,4 +175,16 @@ public class ArrayTests {
 
         Assert.assertEquals(2, test.minMeetingRooms(samples));
     }
+
+    @Test
+    public void MovingAverageTest()
+    {
+        MovingAverage movingAverage = new MovingAverage(3);
+        double a = movingAverage.next(1);
+        double b = movingAverage.next(10);
+        double c = movingAverage.next(3);
+        double d = movingAverage.next(5);
+
+    }
+
 }
