@@ -8,15 +8,15 @@ public class BinaryTreeOrderTraversal {
      * 102. Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        List<List<Integer>> lists = new ArrayList<List<Integer>>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> lists = new ArrayList<>();
 
         if (root != null) queue.add(root);
 
         while(!queue.isEmpty())
         {
             int levelSize = queue.size();
-            List<Integer> array = new ArrayList<Integer>();
+            List<Integer> array = new ArrayList<>();
 
             for (int i=0; i<levelSize; i++)
             {

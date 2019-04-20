@@ -5,10 +5,10 @@ import java.util.List;
 
 public class PascalTriangle {
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> rows = new LinkedList<List<Integer>>();
+        List<List<Integer>> rows = new LinkedList();
         for (int i=0; i<numRows; i++)
         {
-            List<Integer> newRow = new LinkedList<Integer>();
+            List<Integer> newRow = new LinkedList();
             for (int j=0; j<=i; j++)
             {
                 if (j==0 || j==i)

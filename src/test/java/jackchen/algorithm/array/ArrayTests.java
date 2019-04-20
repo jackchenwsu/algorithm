@@ -3,6 +3,8 @@ package jackchen.algorithm.array;
 import org.junit.Test;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class ArrayTests {
 
     @Test
@@ -187,4 +189,18 @@ public class ArrayTests {
 
     }
 
+    @Test
+    public void SubSetTest()
+    {
+        Subset subSet = new Subset();
+
+        List<List<Integer>> lists = subSet.subsets(new int[] { 1, 2, 3 });
+    }
+
+    @Test
+    public void PascalTriangleII()
+    {
+        PascalTriangleII p = new PascalTriangleII();
+        List<Integer> res = p.getRow(3);
+    }
 }

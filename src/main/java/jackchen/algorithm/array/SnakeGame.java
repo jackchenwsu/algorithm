@@ -71,8 +71,9 @@ public class SnakeGame {
             this.snake.offer(new int [] { curX, curY});
             index++;
         }
-
-        this.snake.poll();
+        else {
+            this.snake.poll();
+        }
 
         return this.snake.size();
     }
